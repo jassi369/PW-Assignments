@@ -1,0 +1,5 @@
+Question: Write a short note on tage, elements, and attributes along with examples.
+
+Answer: Tags: Tags are words that are officially used by the HTML language creators
+                as syntax for structuring , adding information in a organized way.
+        Elements: Elemtns
