@@ -1,5 +1,11 @@
 Question: Write a short note on tage, elements, and attributes along with examples.
 
-Answer: Tags: Tags are words that are officially used by the HTML language creators
-                as syntax for structuring , adding information in a organized way.
-        Elements: Elemtns
+Answer: Tags: In HTML tags are used to define elements that are used to represent
+         paragraph, list, images etc. We use (<>) to define tags. They have opening 
+         closing tags. for example <div></div>
+        Elements: Elements are used to represent text, paragraph, image, link etc 
+        They are the most basic component of the html document. Example <p>hey</p> 
+        this as a whole is an element.
+        Attributes: They are used to provide additional properties or adjustments 
+        or information to the HTML elements. Their syntax is like <p class="class">hey</p>
+        Class is an attribute. 

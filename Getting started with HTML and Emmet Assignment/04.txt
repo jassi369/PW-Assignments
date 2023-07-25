@@ -1,0 +1,11 @@
+Question: List out any 3 tags we learned in this module and give a brief 
+        explanation about the tags:
+        1. <p></p> : This tag is used in the body section commonly of the html 
+        document to write text or paragraphs or long form of information. 
+        2. <h1></h1>: This tag is the heading tag that is used to define the titles
+        or headings in the html document it has 6 variations h1,h2,h3,h4,h5,h6 as we go
+        from h1 to h6 the size decreased.
+        3. <div></div>: This is a container or a division tag in a web page that can 
+        be used to divide and use come common properties on the divided elements combined.
+        It has no semantic meaning or function.
+        

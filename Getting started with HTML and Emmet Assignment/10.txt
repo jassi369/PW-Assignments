@@ -1,0 +1,10 @@
+what are global attributes? List any 5 global attributes.
+Global attributes can be used with all html elements. They are not specific to any 
+one element an can be used universally. 
+1. id: It give unique id to a html element.
+2. class: It gives class name to an html element which other elements can also have 
+the same class name.
+3. style: It is used to give css properties to the element.
+4. title: To add additional information about an element.
+5. data: It allows to store custom data within element that can be accessed and manipulated
+ via javascript.

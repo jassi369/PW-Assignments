@@ -1,0 +1,11 @@
+What are self-closing tags? Write a brief note on meta tags.
+Self closing tags are empty tags, they don't require a closing tag because they 
+don't contain any content or nested elements. These tags are used to insert specific 
+elements or elements with certain attributes into an HTML document. example <br> <img>
+
+Meta-tags: They provide information or metadata about the HTML document. They are in 
+in the head element of the web page and are not visible to users. Instead, they provide 
+essential information for browsers, search engines, and other web services
+Examples of some meta tags:
+1. Meta viewport : used to specify responsive web design on mobile devices.
+2. Meta charset : character encoding for the html document

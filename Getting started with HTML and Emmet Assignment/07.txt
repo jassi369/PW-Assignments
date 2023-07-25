@@ -1,0 +1,11 @@
+Explain in brief about the nesting operators in emmet.
+There are 4 nesting operators in emmet:
+1. Child> : This is used to nest element. For example, h1>p this will output <h1><p></p></h1>
+2. Sibling + : This is used to position elements next to the previous element or
+the next element. for example. h1+p  output: <h1></h1><p1></p1>
+3.Multiplication * : This is used to define how many time we want a element to be outputed 
+example. ul>li>3    
+4. Climb up ^ :In Emmet, the "climb up ^" operator is used to navigate up the HTML document's 
+hierarchy or structure. It allows you to quickly target a parent element from within a nested element.
+5. Grouping () : it is used to group sub-trees
+for example div(ui>li>a)*3+footer
