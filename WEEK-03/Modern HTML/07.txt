@@ -1,0 +1,6 @@
+What are the benifits of using semantic tags in our webpage?
+1. We can provide additional information about that document by defining the layout 
+and sections of the webpage.
+2. Semantic elements are of great help to people with disabilities that use screen reader.
+3. They are really good for Search Engine optimization as they help browsers interpret the
+content more easily by making content more adaptive.

@@ -1,0 +1,11 @@
+2. What are HTML entities? List out 5 commonly used HTML entities.
+    Html entities are strings of text that start with an & and end with a semicolon;
+    They are used to show characters that are reserved and imperceptible character.
+     
+     5 commonly used HTML entities are.
+     
+     1. &COPY;  -  copyright
+     2. &AMP - Ampersand
+     3. &GT  - Greater than >
+     4. &TRADE; - trademark symbol
+     5. &reg; - Registration mark

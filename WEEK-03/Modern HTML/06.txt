@@ -1,0 +1,6 @@
+6. List any 5 semantic tags in HTML along with their descriptions.
+    1. <header> - specifies a header for the document
+    2. <main> - Specifies the main content of document
+    3. <footer> - Defines a footer for a document or section
+    4. <section> - Defines a section in document
+    5. <article> - Defines an article

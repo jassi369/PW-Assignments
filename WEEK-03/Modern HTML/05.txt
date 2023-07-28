@@ -1,0 +1,10 @@
+5. Write a short note on the tab index.
+    The tabindex attribute in html specifies the order in which elements are focusable,
+    and the order in which they are navigated with the tab key. The tabindex attribute
+    can be used on any element that can be focused, such as buttons, input fields, and 
+    links. It accepts an integer value which decides which element is focusable.
+    for example 
+    <input type="text" tabindex = "1">
+    <button tabindex="2">submit</button>
+    now when the user presses the tab button first it will focus on input and then on button
+    

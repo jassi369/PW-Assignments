@@ -1,2 +1,11 @@
 1. List out the featueres of HTML5?
-Ans. 1. form improvements
+Ans.
+    1. HTML5 introduced new structural elements that helped to structure the webpage better 
+        which included <header><footer><article><nav>
+    2. HTML5 provided a API for obtaining the user location that can help a lot of website to 
+        show location depended content.
+    3. Local storage API was introduced in HTML5 which allowed for the storage of data on the 
+        user's machine, which improved performance and reduced the need for round trips on a 
+        web page.
+    4.New video and audio intergration directly to the webpage throught soley HTML5 was introduced.
+    5. New input types like date, time and color were introduced.

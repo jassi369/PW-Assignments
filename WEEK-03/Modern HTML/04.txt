@@ -1,0 +1,15 @@
+List any 3 ways which help use in improving the accessiblity of HTML.
+1. Text content - Having well structured content which have a headings, paragraphs
+ and lists is one of the most helpful accessiblity feature for users who rely on screen 
+ readers.
+for example <h2>Heading 1</h2>
+            <p>This is a paragraph</p>
+
+2. Page layouts - It is preferable to use proper structural elements not div like for 
+main navigation we can use <nav></nav> for footer we can use <footer></footer>  for 
+article we can use <article></article>
+
+3. Alt attribute - The alt attribute is  an important attribute in HTML that is used
+to provide alternative text for an image if the image cannot be displayed or if the 
+user is using a screen reader to acess the Page.
+for example <img src= "sample.jpg alt="A sample image">
