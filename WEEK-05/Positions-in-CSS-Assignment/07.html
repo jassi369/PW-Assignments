@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07</title>
+    <style>
+        .heading{
+            text-align: center;
+        }
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .card{
+            width: 180px;
+            height: 260px;
+            border: 2px solid black;
+            position: relative;
+        }
+        .card1{
+            background-color: blue;
+            position: absolute;
+            
+        }
+        .card1:hover{
+            background-color: blue;
+            position: absolute;
+            z-index: 1;
+            
+        }
+        .card2{
+            background-color: green;
+            position: absolute;
+            margin-left:50px;
+            margin-top:50px;
+        }
+        .card2:hover{
+            background-color: green;
+            position: absolute;
+            margin-left:50px;
+            margin-top:50px;
+            z-index: 1;
+        }
+        .card3{
+            background-color: yellow;
+            position: absolute;
+            margin-left:100px;
+            margin-top:100px;
+        }
+        .card3:hover{
+            background-color: yellow;
+            position: absolute;
+            margin-left:100px;
+            margin-top:100px;
+            z-index: 1;
+        }
+    </style>
+    <div></div>
+</head>
+<body>
+    <div class="heading"><h1>Hover To Unveil The Pokemon</h1></div>
+    <div class="card card1"></div>
+    <div class="card card2"></div>
+    <div class="card card3"></div>
+</body>
+</html>
