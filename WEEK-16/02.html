@@ -1,69 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>02</title>
     <style>
-        /* Reset default button styles */
-button {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 13px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: #007bff;
-    color: #ffffff;
-}
-.button{
-    background-color: #ffffff;
-    border: 1px solid #1d2023;
-    color: #192029;
-}
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+      }
 
-.button:hover {
-    background-color: white;
-    color: black;
-}
+      #container {
+        text-align: center;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
 
-.button:active {
-    background-color: white;
-    border-color: black;
-}
+      #mode {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
 
+      .button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      }
+
+      .light-mode {
+        background-color: #ffffff;
+        border: 1px solid #007bff;
+        color: #007bff;
+      }
+
+      .light-mode:hover {
+        background-color: #007bff;
+        color: #ffffff;
+        border-color: #007bff;
+      }
+
+      .dark-mode {
+        background-color: #1d2023;
+        border: 1px solid #007bff;
+        color: #f0f0f0;
+      }
+
+      .dark-mode:hover {
+        background-color: #007bff;
+        color: #f0f0f0;
+        border-color: #007bff;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-    <h1 id="mode">Light Mode</h1>
-    <button id ="btn" class="button">change color</button>
-</div>
+      <h1 id="mode">LIGHT MODE</h1>
+      <button id="btn" class="button">change color</button>
+    </div>
     <script>
-        let mode = document.querySelector("#mode");
-        let btn = document.querySelector("#btn");
-        let container = document.querySelector("body");
-        let isDarkMode = false;
-        btn.addEventListener("click",toggleMode)
+      let mode = document.querySelector("#mode");
+      let btn = document.querySelector("#btn");
+      let container = document.querySelector("body");
+      let isDarkMode = false;
+      btn.addEventListener("click", toggleMode);
 
-        function toggleMode(){
-            if(isDarkMode){
-                lightmode();
-            } else{
-                darkmode();
-            }
-            isDarkMode =!isDarkMode;
+      function toggleMode() {
+        if (isDarkMode) {
+          lightmode();
+        } else {
+          darkmode();
         }
-        function darkmode(){
-            mode.innerHTML = "Dark mode";
-            mode.style.setProperty("color","white")
-            container.style.setProperty("background-color","black");
-        }
-        function lightmode(){
-            mode.innerHTML = "Light Mode";
-            mode.style.setProperty("color","black")
-            container.style.setProperty("background-color","white");
-        }
+        isDarkMode = !isDarkMode;
+      }
+      function darkmode() {
+        mode.innerHTML = "DARK MODE";
+        mode.style.setProperty("color", "dark");
+        container.style.setProperty("background-color", "black");
+      }
+      function lightmode() {
+        mode.innerHTML = "LIGHT MODE";
+        mode.style.setProperty("color", "black");
+        container.style.setProperty("background-color", "white");
+      }
     </script>
-</body>
+  </body>
 </html>

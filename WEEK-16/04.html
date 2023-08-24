@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #cfcdcd;
+        }
+        .main-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 60px 85px 60px 60px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 420px; 
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px; 
+        }
+
+        label {
+             display: block; 
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+    <div class="container">
+        <h1>Sign Up Form</h1>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Minimum 3 characters">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter Your Email">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="(Minimum 8 characters)">
+        <p></p>
+        <input type="submit" value="Submit" class="submit">
+    </div>
+    <script>
+      const nameElement = document.querySelector("#name");
+      const emailElement = document.querySelector("#email");
+      const passwordElement = document.querySelector("#password");  
+      const submit = document.querySelector(".submit")
+      const failedlabel = document.querySelector("p");
+      submit.addEventListener('click',check);
+      function check(){
+        let name = nameElement.value;
+        let email = emailElement.value;
+        let password = passwordElement.value;
+
+        if(name.length>=3 & password.length>=8){
+            failedlabel.textContent = "Form Validation successfull";
+            failedlabel.style.setProperty("color","green");
+            alert("Form Validation successfull");
+
+        }else{
+            failedlabel.textContent = "Form Validation Failed";
+            failedlabel.style.setProperty("color","red");
+            alert("Form Validation failed");
+
+        }
+      }
+    </script>
+</div>
+</body>
+</html>
