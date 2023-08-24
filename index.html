@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+<body>
+    <h1>UPDATE PROFILE PICTURE</h1>
+    <input type="file" name="" id="imageInput">
+    <p>YOUR PROFILE PICTURE</p>
+    <div id="container"></div>
+    <script>
+        const imageInput = document.querySelector("#imageInput");
+        const container = document.querySelector("#container");
+        imageInput.addEventListener('change',process);
+        function process(){
+           const selectedImage = event.target.files[0];
+
+           if(selectedImage){
+            const imageElement = document.createElement('img');
+            imageElement.src = URL.createObjectURL(selectedImage);
+            container.appendChild(imageElement);           }
+        }
+    </script>
+</body>
+</html>
