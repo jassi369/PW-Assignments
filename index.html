@@ -1,27 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01</title>
+    <title>Flappy Bird</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
 </head>
 <body>
-    <h1>UPDATE PROFILE PICTURE</h1>
-    <input type="file" name="" id="imageInput">
-    <p>YOUR PROFILE PICTURE</p>
-    <div id="container"></div>
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
     <script>
-        const imageInput = document.querySelector("#imageInput");
-        const container = document.querySelector("#container");
-        imageInput.addEventListener('change',process);
-        function process(){
-           const selectedImage = event.target.files[0];
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
 
-           if(selectedImage){
-            const imageElement = document.createElement('img');
-            imageElement.src = URL.createObjectURL(selectedImage);
-            container.appendChild(imageElement);           }
+        // Game variables
+        let birdY = canvas.height / 2;
+        let birdVelocity = 0;
+        const gravity = 0.5;
+
+        function gameLoop() {
+            // Update
+            birdVelocity += gravity;
+            birdY += birdVelocity;
+
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw bird
+            ctx.fillStyle = "#FF5733";
+            ctx.fillRect(50, birdY, 30, 30);
+
+            // Request next frame
+            requestAnimationFrame(gameLoop);
         }
+
+        // Handle spacebar for jumping
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 32) { // Spacebar keycode
+                birdVelocity = -10; // Jumping force
+            }
+        });
+
+        // Start the game loop
+        gameLoop();
     </script>
 </body>
 </html>

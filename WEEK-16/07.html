@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07</title>
+    <style>
+      body,
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      #search {
+        padding: 10px;
+        width: 80%;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      #parentList {
+        width: 80%;
+        max-width: 400px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      #parentList li {
+        padding: 10px 20px;
+        border-bottom: 1px solid #e0e0e0;
+        transition: background-color 0.3s;
+      }
+
+      #parentList li:last-child {
+        border-bottom: none;
+      }
+
+      #parentList li:hover {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="" id="search" placeholder="Search for items" />
+    <h1>Results</h1>
+    <ul id="parentList"></ul>
+    <script>
+      const inputElement = document.querySelector("#search");
+      const parentList = document.querySelector("#parentList");
+      const arr = ["HTML", "CSS", "Tailwind CSS", "GitHub", "Javascript"];
+      for (let i = 0; i < arr.length; i++) {
+        let list = document.createElement("li");
+        list.textContent = arr[i];
+        parentList.appendChild(list);
+      }
+      inputElement.addEventListener("input", engine);
+      function engine() {
+        let input = inputElement.value.toLowerCase();
+        parentList.innerHTML = "";
+        let filteredArray = arr.filter((element) => {
+          return element.toLowerCase().includes(input);
+        });
+
+        filteredArray.forEach((item) => {
+          let list = document.createElement("li");
+          list.textContent = item;
+          parentList.appendChild(list);
+        });
+      }
+    </script>
+  </body>
+</html>
