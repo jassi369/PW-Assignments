@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>09</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #display {
+        font-size: 18px;
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="login">Login</button>
+      <button id="logout">Logout</button>
+      <p id="display"></p>
+    </div>
+    <script>
+      const login = document.querySelector("#login");
+      const logout = document.querySelector("#logout");
+      const display = document.querySelector("#display");
+      login.addEventListener("click", loginFun);
+      logout.addEventListener("click", logoutFun);
+      function loginFun() {
+        localStorage.setItem("AuthenticationStatus", "loggedIn");
+        display.textContent = "USER IS LOGGED IN";
+      }
+      function logoutFun() {
+        localStorage.removeItem("AuthenticationStatus");
+        display.textContent = "USER HAS NOT LOGGED IN";
+      }
+      if (localStorage.getItem("AuthenticationStatus") === "loggedIn") {
+        display.textContent = "USER IS LOGGED IN";
+      } else {
+        display.textContent = "USER HAS NOT LOGGED IN";
+      }
+    </script>
+  </body>
+</html>

@@ -50,24 +50,24 @@
       alt="logo"
     />
     <script>
-        const title = document.querySelector("h1");
+      const title = document.querySelector("h1");
       const btn = document.querySelector("#btn");
       const image = document.querySelector("img");
       let check = true;
-      title.textContent = "YOUR IMAGE IS VISIBLE"
+      title.textContent = "YOUR IMAGE IS VISIBLE";
 
       btn.addEventListener("click", toggleImage);
 
       function toggleImage() {
         if (check == true) {
-          image.style.opacity = "0"; 
-            title.textContent = "YOUR IMAGE IS NOT VISIBLE";
-          check = false; 
+          image.style.opacity = "0";
+          title.textContent = "YOUR IMAGE IS NOT VISIBLE";
+          check = false;
         } else {
-          image.style.opacity = "1"; 
+          image.style.opacity = "1";
           title.textContent = "YOUR IMAGE IS VISIBLE";
 
-          check = true; 
+          check = true;
         }
       }
     </script>

@@ -1,83 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Update Profile Picture</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
 
-        .container {
-            text-align: center;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-        }
+      .container {
+        text-align: center;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+      }
 
-        h1 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
 
-        input[type="file"] {
-            display: none;
-        }
+      input[type="file"] {
+        display: none;
+      }
 
-        label {
-            display: block;
-            cursor: pointer;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+      label {
+        display: block;
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
 
-        label:hover {
-            background-color: #0056b3;
-        }
+      label:hover {
+        background-color: #0056b3;
+      }
 
-        #profileImage {
-            max-width: 100%;
-            margin-top: 15px;
-            border-radius: 5px;
-        }
+      #profileImage {
+        max-width: 100%;
+        margin-top: 15px;
+        border-radius: 5px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>UPDATE PROFILE PICTURE</h1>
-        <label for="imageInput">Choose Image</label>
-        <input type="file" id="imageInput">
-        <p>YOUR PROFILE PICTURE</p>
-        <div id="profileImage"></div>
+      <h1>UPDATE PROFILE PICTURE</h1>
+      <label for="imageInput">Choose Image</label>
+      <input type="file" id="imageInput" />
+      <p>YOUR PROFILE PICTURE</p>
+      <div id="profileImage"></div>
     </div>
     <script>
-        const imageInput = document.querySelector("#imageInput");
-        const profileImage = document.querySelector("#profileImage");
+      const imageInput = document.querySelector("#imageInput");
+      const profileImage = document.querySelector("#profileImage");
 
-        imageInput.addEventListener('change', process);
+      imageInput.addEventListener("change", process);
 
-        function process() {
-            const selectedImage = event.target.files[0];
+      function process() {
+        const selectedImage = event.target.files[0];
 
-            if (selectedImage) {
-                const imageElement = document.createElement('img');
-                imageElement.src = URL.createObjectURL(selectedImage);
-                profileImage.innerHTML = '';
-                profileImage.appendChild(imageElement);
-            }
+        if (selectedImage) {
+          const imageElement = document.createElement("img");
+          imageElement.src = URL.createObjectURL(selectedImage);
+          profileImage.innerHTML = "";
+          profileImage.appendChild(imageElement);
         }
+      }
     </script>
-</body>
+  </body>
 </html>
