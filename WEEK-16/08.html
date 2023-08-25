@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08</title>
+    <style>
+        .root {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="root">
+    <div class="container">
+        <h1 class="displayTime"></h1>
+    </div>
+    <script>
+        const displayTime = document.querySelector(".displayTime");
+        const root = document.querySelector(".root");
+
+        function updateClock() {
+            const date = new Date();
+            let hour = date.getHours().toString().padStart(2, "0");
+            let min = date.getMinutes().toString().padStart(2, "0");
+            let sec = date.getSeconds().toString().padStart(2, "0");
+            let realTime = `${hour}${min}${sec}`;
+            displayTime.textContent = `${hour}:${min}:${sec}`;
+            root.style.backgroundColor = `#${realTime}`;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
