@@ -1,58 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Flappy Bird</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f5f5f5;
-        }
-
-        canvas {
-            border: 1px solid #000;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mr. Robot Themed Website</title>
 </head>
 <body>
-    <canvas id="gameCanvas" width="400" height="600"></canvas>
-    <script>
-        const canvas = document.getElementById("gameCanvas");
-        const ctx = canvas.getContext("2d");
-
-        // Game variables
-        let birdY = canvas.height / 2;
-        let birdVelocity = 0;
-        const gravity = 0.5;
-
-        function gameLoop() {
-            // Update
-            birdVelocity += gravity;
-            birdY += birdVelocity;
-
-            // Clear canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw bird
-            ctx.fillStyle = "#FF5733";
-            ctx.fillRect(50, birdY, 30, 30);
-
-            // Request next frame
-            requestAnimationFrame(gameLoop);
-        }
-
-        // Handle spacebar for jumping
-        document.addEventListener("keydown", function(event) {
-            if (event.keyCode === 32) { // Spacebar keycode
-                birdVelocity = -10; // Jumping force
-            }
-        });
-
-        // Start the game loop
-        gameLoop();
-    </script>
+    <header>
+        <h1>Welcome to the Mr. Robot Themed Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Episodes</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>Revolutionizing the Digital World</h2>
+            <p>Join us in exploring the dark and mysterious world of hacking and cybersecurity.</p>
+            <a href="#" class="btn">Get Started</a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Mr. Robot Themed Website</p>
+    </footer>
 </body>
 </html>
