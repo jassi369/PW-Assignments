@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Mr. Robot Themed Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Login Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      width: 300px;
+      margin: 50px  auto;
+      border: 1px solid #ccc;
+      padding: 20px;
+      padding-right: 40px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #337ab7;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Mr. Robot Themed Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Episodes</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <h2>Revolutionizing the Digital World</h2>
-            <p>Join us in exploring the dark and mysterious world of hacking and cybersecurity.</p>
-            <a href="#" class="btn">Get Started</a>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2023 Mr. Robot Themed Website</p>
-    </footer>
+  <form action="/login" method="post">
+    <h1>Login</h1>
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Login</button>
+  </form>
 </body>
 </html>
