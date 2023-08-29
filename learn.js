@@ -1,9 +1,5 @@
-const user= {
-    id : 1,
-    name: "jassi",
-    email: "369jassi@gmail.com",
-    phoneNum:8556826622,
-}
-console.log(user[id]);
-const jassi = new Set();
-jassi.
+const num = [1,2,3,4,5];
+const doubleNum = num.map(function(num){
+    return num*2;
+});
+console.log(doubleNum);
