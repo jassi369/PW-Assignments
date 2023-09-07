@@ -1,2 +1,8 @@
-var message  ="sorry";
-console.log(message);
+const { createHash } = require('crypto');
+
+function hash(input){
+  return createHash('sha256').update(input).digest('base64');
+}
+let password = "jassi";
+const hash1 = hash(password);
+console.log(hash1);
