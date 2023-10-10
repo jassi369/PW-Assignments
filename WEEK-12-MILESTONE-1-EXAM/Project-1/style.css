@@ -1,45 +1,102 @@
-body{
-    margin: 0px 110px 0px 110px;
+body {
+  margin: 0px 110px 0px 110px;
 }
 .navgation {
-    display: flex;
-    /* margin: 0px 100px 0px 100px; */
-    justify-content: space-between;
-    padding: 0px;
+  display: flex;
+  /* margin: 0px 100px 0px 100px; */
+  justify-content: space-between;
+  padding: 0px;
 }
-.left-group, .center-group,.right-group{
-    display: flex;
-    align-items: center;
+.left-group,
+.center-group,
+.right-group {
+  display: flex;
+  align-items: center;
 }
-.center-group{
-    justify-content:space-around;
+.center-group {
+  justify-content: space-around;
 }
-.navgation a, .navgation button {
-    margin: 30px 40px; 
-    text-decoration: none;
-    color: rgb(83, 82, 82);
-    font-size: large;
-    font-family: sans;
+.navgation a,
+.navgation button {
+  margin: 30px 40px;
+  text-decoration: none;
+  color: rgb(83, 82, 82);
+  font-size: large;
+  font-family: sans;
 }
- a:hover{
-    color: orange;
- }
+a:hover {
+  color: orange;
+}
 
 .navgation #logo {
-    height: 40px; 
+  height: 40px;
 }
 
 .navgation #logo-text {
-    margin: 0 10px;
-    font-weight:900;
-    font-size:larger; 
-    font-family: sans;
+  margin: 0 10px;
+  font-weight: 900;
+  font-size: larger;
+  font-family: sans;
 }
-#sign-up-btn{
-    width: 150px;
-    height:50px;
-    background-color: white;
+#sign-up-btn {
+  width: 150px;
+  height: 50px;
+  background-color: white;
 }
-#sign-up-btn:hover{
-    background-color: orange;
+#sign-up-btn:hover {
+  background-color: orange;
+}
+/*2nd part*/
+.second-half {
+  /* border: 1px solid black; */
+  display: flex;
+}
+.textImage {
+  flex: 1.5;
+  /* border: 1px solid blue; */
+}
+.big-image {
+  flex: 1;
+}
+.big-text {
+  font-size: 70px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: 120px 0px 0px 0px;
+  line-height: 100px;
+}
+.small-text-box {
+  padding: 10px;
+  border-left: 1px solid black;
+}
+.small-text {
+  font-size: 30px;
+  color: #615f5f;
+  font-family: sans-serif;
+  line-height: 32px;
+  margin: 0px 10px;
+}
+.getstarted-learnmore-btn {
+  display: flex;
+  /* border: 1px solid black; */
+  margin-top: 30px;
+}
+.get-started {
+  height: 50px;
+  width: 200px;
+  font-family: sans-serif;
+  font-size: 22px;
+  background-color: rgb(251, 72, 27);
+  border-radius: 6px;
+  border: 0px;
+}
+.learn-more {
+  height: 50px;
+  width: 200px;
+  font-family: sans-serif;
+  font-size: 22px;
+  margin-left: 40px;
+}
+#main-image {
+  height: 640px;
 }
