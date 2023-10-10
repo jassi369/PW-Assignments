@@ -1,0 +1,45 @@
+body{
+    margin: 0px 110px 0px 110px;
+}
+.navgation {
+    display: flex;
+    /* margin: 0px 100px 0px 100px; */
+    justify-content: space-between;
+    padding: 0px;
+}
+.left-group, .center-group,.right-group{
+    display: flex;
+    align-items: center;
+}
+.center-group{
+    justify-content:space-around;
+}
+.navgation a, .navgation button {
+    margin: 30px 40px; 
+    text-decoration: none;
+    color: rgb(83, 82, 82);
+    font-size: large;
+    font-family: sans;
+}
+ a:hover{
+    color: orange;
+ }
+
+.navgation #logo {
+    height: 40px; 
+}
+
+.navgation #logo-text {
+    margin: 0 10px;
+    font-weight:900;
+    font-size:larger; 
+    font-family: sans;
+}
+#sign-up-btn{
+    width: 150px;
+    height:50px;
+    background-color: white;
+}
+#sign-up-btn:hover{
+    background-color: orange;
+}
